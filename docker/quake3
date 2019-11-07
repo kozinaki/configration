@@ -1,0 +1,12 @@
+FROM debian:stretch-slim
+
+WORKDIR /quake3
+
+COPY . ./
+
+EXPOSE 27960/tcp
+EXPOSE 27960/udp
+
+ENV PATH /quake3:$PATH
+
+CMD ["quake3.sh"]

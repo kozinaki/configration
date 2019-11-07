@@ -1,0 +1,14 @@
+FROM debian:stretch-slim
+
+WORKDIR /counterStrike1.6
+
+COPY . ./
+
+EXPOSE 27015/tcp
+EXPOSE 27015/udp
+
+ENV PATH /counterStrike1.6:$PATH
+
+RUN apt-get update && apt-get install -y lib32gcc1
+
+CMD ["cstrike.sh"]

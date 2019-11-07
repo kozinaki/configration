@@ -1,0 +1,42 @@
+FROM debian:stable
+
+WORKDIR /doom
+
+COPY . ./
+
+EXPOSE 10666/tcp
+EXPOSE 10666/udp
+#EXPOSE 10667/tcp
+#EXPOSE 10667/udp
+EXPOSE 10700/tcp
+EXPOSE 10700/udp
+
+ENV PATH /doom:$PATH
+
+RUN ln -s /doom/lib/libSDL-1.2.so.0.11.4 /lib/x86_64-linux-gnu/libSDL-1.2.so.0 \
+	&& ln -s /doom/lib/libcrypto.so.1.0.0 /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 \
+	&& ln -s /doom/lib/libasound.so.2.0.0 /lib/x86_64-linux-gnu/libasound.so.2 \
+	&& ln -s /doom/lib/libpulse-simple.so.0.1.1 /lib/x86_64-linux-gnu/libpulse-simple.so.0 \
+	&& ln -s /doom/lib/libpulse.so.0.20.3 /lib/x86_64-linux-gnu/libpulse.so.0 \
+	&& ln -s /doom/lib/libX11.so.6.3.0 /lib/x86_64-linux-gnu/libX11.so.6 \
+	&& ln -s /doom/lib/libXext.so.6.4.0 /lib/x86_64-linux-gnu/libXext.so.6 \
+	&& ln -s /doom/lib/libcaca.so.0.99.19 /lib/x86_64-linux-gnu/libcaca.so.0 \
+	&& ln -s /doom/lib/libpulsecommon-12.2.so /lib/x86_64-linux-gnu/libpulsecommon-12.2.so \
+	&& ln -s /doom/lib/libdbus-1.so.3.19.9 /lib/x86_64-linux-gnu/libdbus-1.so.3 \ 
+	&& ln -s /doom/lib/libxcb.so.1.1.0 /lib/x86_64-linux-gnu/libxcb.so.1 \
+	&& ln -s /doom/lib/libslang.so.2.3.2 /lib/x86_64-linux-gnu/libslang.so.2 \
+	&& ln -s /doom/lib/libwrap.so.0.7.6 /lib/x86_64-linux-gnu/libwrap.so.0 \
+	&& ln -s /doom/lib/libsndfile.so.1.0.28 /lib/x86_64-linux-gnu/libsndfile.so.1 \
+	&& ln -s /doom/lib/libasyncns.so.0.3.1 /lib/x86_64-linux-gnu/libasyncns.so.0 \
+	&& ln -s /doom/lib/libXau.so.6.0.0 /lib/x86_64-linux-gnu/libXau.so.6 \
+	&& ln -s /doom/lib/libFLAC.so.8.3.0 /lib/x86_64-linux-gnu/libFLAC.so.8 \
+	&& ln -s /doom/lib/libogg.so.0 /lib/x86_64-linux-gnu/libogg.so.0.8.2 \
+	&& ln -s /doom/lib/libvorbis.so.0 /lib/x86_64-linux-gnu/libvorbis.so.0 \
+	&& ln -s /doom/lib/libvorbisenc.so.2.0.11 /lib/x86_64-linux-gnu/libvorbisenc.so.2 \
+	&& ln -s /doom/lib/libbsd.so.0.9.1 /lib/x86_64-linux-gnu/libbsd.so.0 \
+	&& ln -s /doom/lib/libXdmcp.so.6.0.0 /lib/x86_64-linux-gnu/libXdmcp.so.6 \
+	&& ln -s /doom/lib/libogg.so.0.8.2 /lib/x86_64-linux-gnu/libogg.so.0 \
+	&& rm /lib/x86_64-linux-gnu/libm.so.6 \
+	&& ln -s /doom/lib/libm-2.29.so /lib/x86_64-linux-gnu/libm.so.6
+
+CMD ["deathmatch.sh", "DOOM2.WAD", "deathmatch.cfg"]

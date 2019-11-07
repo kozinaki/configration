@@ -1,0 +1,14 @@
+FROM i386/debian:stable
+
+WORKDIR /rune/System
+
+COPY ./ /rune/
+
+ENV PATH /rune/System:$PATH
+
+EXPOSE 7777/tcp
+EXPOSE 7777/udp
+
+RUN apt-get update && apt install libx11-dev:i386 libx11-6:i386 -y && apt install libxext6 -y 
+
+CMD ["rune.sh"]

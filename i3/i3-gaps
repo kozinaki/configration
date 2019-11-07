@@ -17,6 +17,8 @@ make
 sudo make install
 ```
 
+## For timeout connection try - git config --global url.https://anongit.freedesktop.org/git.insteadOf git://anongit.freedesktop.org
+
 ## Installing
 
 gaps also needs to be installed from source so run these commands:

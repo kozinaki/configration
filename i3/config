@@ -302,4 +302,27 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# For setting wallpapers
 exec --no-startup-id nitrogen --restore &
+# For first - exec xrandr then try change next line for you monitor settings
+exec –no-startup-id xrandr –output HDMI2 –right-of HDMI1 –auto
+
+# For switch language (ubuntu)
+exec "setxkbmap -layout us,ru"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
+# For syste commands. You need file i3exit. Also install i3lock
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $HOME/.config/i3/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/.config/i3/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/.config/i3/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id $HOME/.config/i3/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id $HOME/.config/i3/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/.config/i3/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
