@@ -1,0 +1,5 @@
+I had the same issue, I fixed it by adding sway to UseIn in /usr/share/xdg-desktop-portal/portals/gtk.portal
+
+without this config there is no dbus interface org.freedesktop.impl.portal.FileChooser
+
+not sure what should be the default interface for sway or how it was working previously
