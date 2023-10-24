@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Visual Studio Code
+Comment=Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications
+TryExec=/home/magdi/dvlpmnt/vscode/bin/code
+Exec=/bin/zsh -i -c "/home/magdi/dvlpmnt/vscode/bin/code" %f
+Icon=/home/magdi/dvlpmnt/vscode/resources/app/resources/linux/code.png
+Terminal=false
+Type=Application
+Categories=Development;
+MimeType=x-scheme-handler/tg;
+Keywords=vscode;ide;
+Actions=quit;
+DBusActivatable=true
+SingleMainWindow=true
+X-GNOME-UsesNotifications=true
+X-GNOME-SingleWindow=true

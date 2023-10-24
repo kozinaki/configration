@@ -3,3 +3,6 @@ I had the same issue, I fixed it by adding sway to UseIn in /usr/share/xdg-deskt
 without this config there is no dbus interface org.freedesktop.impl.portal.FileChooser
 
 not sure what should be the default interface for sway or how it was working previously
+
+https://git.sr.ht/~oscarcp/ghostfiles/tree/master/item/sway_wm/scripts/sway_bar.sh
+https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/
