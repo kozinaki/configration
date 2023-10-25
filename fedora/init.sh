@@ -11,6 +11,9 @@ sudo systemctl start gdm.service
 ### Install applications
 sudo dnf install firefox git vim htop sway rofi alacritty zsh thunar google-noto-emoji-color-fonts
 
+### Install dev tools
+sudo dnf install make automake gcc gcc-c++ kernel-devel
+
 ### Remove useless applications
 sudo dnf remove podman
 sudo dnf autoremove
