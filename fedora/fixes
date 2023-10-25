@@ -1,3 +1,4 @@
+### Show dialogs
 I had the same issue, I fixed it by adding sway to UseIn in /usr/share/xdg-desktop-portal/portals/gtk.portal
 
 without this config there is no dbus interface org.freedesktop.impl.portal.FileChooser
@@ -6,3 +7,18 @@ not sure what should be the default interface for sway or how it was working pre
 
 https://git.sr.ht/~oscarcp/ghostfiles/tree/master/item/sway_wm/scripts/sway_bar.sh
 https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/
+
+
+### Autostart gdm
+sudo systemctl set-default graphical.target
+or create symbolic link
+sudo ln -sf /usr/lib/systemd/system/graphical.target /etc/systemd/system/default.target
+check for default login with GUI
+systemctl get-default
+
+then
+sudo systemctl enable gdm --now
+sudo shutdown -r now
+
+### Start gnome settings
+env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
