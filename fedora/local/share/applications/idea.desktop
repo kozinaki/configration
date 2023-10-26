@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=IntelliJ IDEA Community Edition
 Comment=The IDE for pure Java and Kotlin development
-TryExec=/home/magdi/dvlpmnt/idea/bin/idea.sh
-Exec=/bin/zsh -i -c "/home/magdi/dvlpmnt/idea/bin/idea.sh" %f
-Icon=/home/magdi/dvlpmnt/idea/bin/idea.png
+TryExec=${HOME}/dvlpmnt/idea/bin/idea.sh
+Exec=/bin/zsh -i -c "${HOME}/dvlpmnt/idea/bin/idea.sh" %f
+Icon=${HOME}/dvlpmnt/idea/bin/idea.png
 Terminal=false
 Type=Application
 Categories=Development;
