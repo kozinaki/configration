@@ -9,7 +9,20 @@ sudo systemctl enable gdm.service --now
 sudo systemctl start gdm.service 
 
 ### Install applications
-sudo dnf install firefox git vim htop sway rofi alacritty zsh thunar google-noto-emoji-color-fonts
+sudo dnf install sway \
+	rofi \
+	git \
+	zsh \
+	alacritty \
+	vim \
+	htop \
+	firefox \
+	cheese \
+	eog \
+	alsa-utils \
+	sqlite3 \
+	thunar \
+	google-noto-emoji-color-fonts
 
 ### Install dev tools
 sudo dnf install make automake gcc gcc-c++ kernel-devel

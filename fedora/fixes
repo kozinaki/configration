@@ -22,3 +22,6 @@ sudo shutdown -r now
 
 ### Start gnome settings
 env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+
+### If idea intellij does not render UI
+export _JAVA_AWT_WM_NONREPARENTING=1
