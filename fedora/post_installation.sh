@@ -22,7 +22,8 @@ sudo dnf install sway \
 	alsa-utils \
 	sqlite3 \
 	thunar \
-	google-noto-emoji-color-fonts
+	google-noto-emoji-color-fonts \
+	wl-clipboard
 
 ### Install dev tools
 sudo dnf install make automake gcc gcc-c++ kernel-devel

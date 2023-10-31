@@ -204,7 +204,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
 
 # Window borders
 #new_window 1pixel
