@@ -1,0 +1,2 @@
+# Sway
+[[/sway/sway.png]]
