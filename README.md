@@ -1,2 +1,2 @@
 # Sway
-[[/sway/sway.png]]
+<img src="sway/sway.png">
